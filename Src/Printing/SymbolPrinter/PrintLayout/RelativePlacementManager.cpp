@@ -484,8 +484,8 @@ void RelativePlacementManager::calculateRelativePlacement()
                 if (ratioToShortest >= 1)
                 {
                     // grow logaritmically (the factor is empirical - FIXME)
-                    currSym.neededAdditionalProportion = (float)std::log( ratioToShortest ) /
-                                                            (float)std::log( 2 ) * 90.0f;
+                    currSym.neededAdditionalProportion = (float)std::log( static_cast<float>(ratioToShortest) ) /
+                                                            (float)std::log( 2.0f ) * 90.0f;
                     ASSERT_E( currSym.neededAdditionalProportion, >=, 0.0f );
                     //std::cout << "currSym.neededAdditionalProportion = " << currSym.neededAdditionalProportion << "\n";
                 }

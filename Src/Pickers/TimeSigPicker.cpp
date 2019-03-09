@@ -274,7 +274,7 @@ void TimeSigPicker::enterPressed(wxCommandEvent& evt)
         return;
     }
 
-    float denom_check = (float)log(bottom)/(float)log(2);
+    float denom_check = logf(bottom)/logf(2);
     if ((int)denom_check != (float)denom_check)
     {
         wxBell();
